@@ -1,0 +1,98 @@
+/* Encabezado de la galería */
+.gallery-header {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 150px;
+  height: calc(150px * 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 4px solid #d59758;
+}
+
+.gallery-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+  z-index: 0;
+}
+
+.gallery-header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.gallery-header p {
+  font-size: 18px;
+  max-width: 800px;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+/* Configuración de la cuadrícula */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Coloca las imágenes en columnas ajustables */
+  grid-auto-rows: 200px; /* Altura base uniforme */
+  gap: 5px; /* Márgenes pequeños y consistentes */
+  padding: 10px;
+  background-color: #fff9f1; /* Fondo claro */
+}
+
+/* Configuración dinámica para imágenes */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Variar el tamaño de algunas imágenes para simular un mosaico */
+.gallery-item:nth-child(3n) {
+  grid-row: span 2; /* Imagen más alta */
+}
+
+.gallery-item:nth-child(5n) {
+  grid-column: span 2; /* Imagen más ancha */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 8px; /* Mantener bordes redondeados */
+}
+
+.gallery-item:hover {
+  transform: scale(1.5); /* Zoom suave al pasar el mouse */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Más columnas en pantallas pequeñas */
+      grid-auto-rows: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Ajustar más en pantallas muy pequeñas */
+      grid-auto-rows: 120px;
+  }
+}

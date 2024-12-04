@@ -1,0 +1,131 @@
+.contact-header {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding-top: 200px;
+    height: calc(200px * 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .contact-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con transparencia */
+    z-index: 0;
+  }
+  
+  .contact-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    z-index: 1;
+  }
+  
+  .contact-header p {
+    font-size: 20px;
+    max-width: 800px;
+    line-height: 1.6;
+    z-index: 1;
+  }
+  
+  /* Contenedor principal del contenido de contacto */
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+  }
+  
+  .contact-form {
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  .contact-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .contact-form textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  .recaptcha-placeholder {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form button {
+    background-color: #7B4436;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #5e3329;
+  }
+  
+  .contact-message {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Estilo para la galería de imágenes */
+  .contact-gallery {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar imágenes dentro de la columna */
+    gap: 15px; /* Reducir el espacio entre las imágenes */
+  }
+  
+  .gallery-item {
+    width: 80%; /* Ajustar el ancho de las imágenes a un 80% del contenedor */
+    max-width: 200px; /* Limitar el ancho máximo de cada imagen */
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.05); /* Efecto de zoom al hacer hover */
+  }
