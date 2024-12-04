@@ -164,7 +164,7 @@ const sectionImages = {
 function Menu() {
   const [menuType, setMenuType] = useState("desayunos");
   const [activeSection, setActiveSection] = useState(Object.keys(desayunosSections)[0]);
-  const { addToCart, cartItems, clearCart } = useContext(CartContext);
+  const { addToCart, cartItems } = useContext(CartContext);
 
   const switchMenu = (type) => {
     if (cartItems.length > 0 && cartItems[0].menuType !== type) {

@@ -23,13 +23,13 @@ const initialTables = [
 ];
 
 function Reservations() {
+  const [tables, setTables] = useState(initialTables); // Estado para las mesas
   const [rating, setRating] = useState(0);
   const [opinion, setOpinion] = useState('');
   const [reviews, setReviews] = useState([]);
   const [reservationDate, setReservationDate] = useState('');
   const [reservationTime, setReservationTime] = useState('');
   const [peopleCount, setPeopleCount] = useState('');
-  const [tables, setTables] = useState(initialTables);
   const [selectedTable, setSelectedTable] = useState(null);
 
   // Validación de teléfono
@@ -55,6 +55,7 @@ function Reservations() {
 
     alert(`Reserva confirmada para la ${selectedTable}.`);
 
+    // Actualizamos el estado de las mesas
     setTables((prevTables) =>
       prevTables.map((table) =>
         table.label === selectedTable ? { ...table, reserved: true } : table
@@ -122,11 +123,11 @@ function Reservations() {
             required
           />
           
-          {/* Listado de mesas con subtítulos */}
+          {/* Listado de mesas */}
           <div className="table-section">
             <h3>Terraza</h3>
             <div className="table-row">
-              {initialTables.slice(0, 5).map((table) => (
+              {tables.slice(0, 5).map((table) => (
                 <button
                   key={table.id}
                   className={`table-button ${table.reserved ? 'reserved' : ''} ${
@@ -144,7 +145,7 @@ function Reservations() {
 
             <h3>Interior</h3>
             <div className="table-row">
-              {initialTables.slice(5, 9).map((table) => (
+              {tables.slice(5, 9).map((table) => (
                 <button
                   key={table.id}
                   className={`table-button ${table.reserved ? 'reserved' : ''} ${
@@ -162,7 +163,7 @@ function Reservations() {
 
             <h3>En la arena</h3>
             <div className="table-row">
-              {initialTables.slice(9).map((table) => (
+              {tables.slice(9).map((table) => (
                 <button
                   key={table.id}
                   className={`table-button ${table.reserved ? 'reserved' : ''} ${
