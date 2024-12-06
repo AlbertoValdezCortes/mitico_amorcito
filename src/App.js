@@ -9,8 +9,9 @@ import Reservations from './components/Reservations.js';
 import Contact from './components/Contact.js';
 import Blog from './components/Blog.js';
 import ShoppingCart from './components/ShoppingCart.js';
+import MenuNavideno from './components/MenuNavideno/menunavideno.js'; // Importar el menú navideño
 import logo from './imagenes/logo.png';
-import { CartProvider } from './contexts/CartContext'; // Importar el CartProvider
+import { CartProvider } from './contexts/CartContext.js';
 import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
               <li><Link to="/about" onClick={toggleMenu}>Nosotros</Link></li>
               <li><Link to="/gallery" onClick={toggleMenu}>Galería</Link></li>
               <li><Link to="/menu" onClick={toggleMenu}>Menú</Link></li>
+              <li><Link to="/menu-navideno" onClick={toggleMenu}>Menú Navideño</Link></li>
               <li><Link to="/contact" onClick={toggleMenu}>Contacto</Link></li>
               <li><Link to="/reservations" onClick={toggleMenu}>Reservar</Link></li>
             </ul>
@@ -70,6 +72,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/menu" element={<Menu />} />
+            <Route path="/menu-navideno" element={<MenuNavideno />} /> {/* Ruta del menú navideño */}
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />

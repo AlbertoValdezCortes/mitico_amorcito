@@ -1,0 +1,163 @@
+.menu-container {
+    position: relative;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgb(255, 251, 235);
+  }
+  
+  .esfera-container {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    transform: translateX(-50%);
+  }
+  
+  .esfera-img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+  }
+  
+  .muerdago-img {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+  }
+  
+  .menu-content {
+    position: relative;
+    z-index: 10;
+    padding-top: 6rem;
+  }
+  
+  .menu-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #b91c1c;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .menu-subtitle {
+    font-size: 1.5rem;
+    color: rgb(120, 53, 15);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .packages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .package-card {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .package-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #15803d;
+    margin-bottom: 1rem;
+  }
+  
+  .package-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    color: rgb(24, 24, 27);
+  }
+  
+  .package-price {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #991b1b;
+    margin-top: 1rem;
+  }
+  
+  .pinguino-img {
+    position: absolute;
+    left: -5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7rem;
+    height: 7rem;
+    object-fit: contain;
+  }
+  
+  .santa-img {
+    position: absolute;
+    bottom: -1rem;
+    left: 1rem;
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+  }
+  
+  .arbol-img {
+    position: absolute;
+    bottom: -1rem;
+    right: 1rem;
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+  }
+  
+  /* Media queries para responsividad */
+  @media (max-width: 768px) {
+    .menu-container {
+      padding: 1rem;
+    }
+    
+    .esfera-img,
+    .muerdago-img,
+    .santa-img,
+    .arbol-img {
+      width: 4rem;
+      height: 4rem;
+    }
+    
+    .pinguino-img {
+      width: 3.5rem;
+      height: 3.5rem;
+      left: -2.5rem;
+    }
+    
+    .menu-title {
+      font-size: 1.75rem;
+    }
+    
+    .menu-subtitle {
+      font-size: 1.25rem;
+    }
+    
+    .package-title {
+      font-size: 1.25rem;
+    }
+    
+    .package-list {
+      font-size: 1rem;
+    }
+    
+    .package-price {
+      font-size: 1.75rem;
+    }
+  }
+
+  .hidden-qr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    visibility: hidden;
+  }
