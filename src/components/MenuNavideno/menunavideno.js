@@ -81,7 +81,7 @@ const MenuNavideno = () => {
               <li>15 AROS DE CEBOLLA</li>
               <li>5 CORONA FAMILIAR</li>
             </ul>
-            <p className="package-price">$1199</p>
+            <p className="package-price">$1049</p>
           </div>
         </div>
       </div>
