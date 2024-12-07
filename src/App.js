@@ -76,7 +76,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/menu" element={<Menu />} />
             {/* Ruta funcional del menú navideño (accesible solo por QR o directamente) */}
-            <Route path="/menu-navideno" element={<MenuNavideno />} />
+            <Route path="/menunavideno" element={<MenuNavideno />} />
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
