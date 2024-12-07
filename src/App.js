@@ -56,6 +56,7 @@ function App() {
               <li><Link to="/gallery" onClick={toggleMenu}>Galería</Link></li>
               <li><Link to="/menu" onClick={toggleMenu}>Menú</Link></li>
               {/* Ruta oculta: el Menú Navideño no se muestra en el menú de navegación */}
+              <li><Link to="/menunavideno" onClick={toggleMenu}>Posadas</Link></li>
               <li><Link to="/contact" onClick={toggleMenu}>Contacto</Link></li>
               <li><Link to="/reservations" onClick={toggleMenu}>Reservar</Link></li>
             </ul>
