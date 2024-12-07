@@ -13,6 +13,8 @@ import MenuNavideno from './components/MenuNavideno/menunavideno.js'; // Importa
 import logo from './imagenes/logo.png';
 import { CartProvider } from './contexts/CartContext.js';
 import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
+import MenuDesayunos from './components/MenuNavideno/MenuDesayunos.js';
+import MenuComida from './components/MenuNavideno/MenuComida.js';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,7 +55,7 @@ function App() {
               <li><Link to="/about" onClick={toggleMenu}>Nosotros</Link></li>
               <li><Link to="/gallery" onClick={toggleMenu}>Galería</Link></li>
               <li><Link to="/menu" onClick={toggleMenu}>Menú</Link></li>
-              <li><Link to="/menu-navideno" onClick={toggleMenu}>Menú Navideño</Link></li>
+              {/* Ruta oculta: el Menú Navideño no se muestra en el menú de navegación */}
               <li><Link to="/contact" onClick={toggleMenu}>Contacto</Link></li>
               <li><Link to="/reservations" onClick={toggleMenu}>Reservar</Link></li>
             </ul>
@@ -72,11 +74,14 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/menu" element={<Menu />} />
-            <Route path="/menu-navideno" element={<MenuNavideno />} /> {/* Ruta del menú navideño */}
+            {/* Ruta funcional del menú navideño (accesible solo por QR o directamente) */}
+            <Route path="/menu-navideno" element={<MenuNavideno />} />
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/shopping-cart" element={<ShoppingCart />} />
+            <Route path="/menu-desayunos" element={<MenuDesayunos />} />
+            <Route path="/menu-comida" element={<MenuComida />} />
           </Routes>
 
           <Link to="/shopping-cart" className="floating-cart-button">🛒</Link>
