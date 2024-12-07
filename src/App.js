@@ -56,7 +56,7 @@ function App() {
               <li><Link to="/gallery" onClick={toggleMenu}>Galería</Link></li>
               <li><Link to="/menu" onClick={toggleMenu}>Menú</Link></li>
               {/* Ruta oculta: el Menú Navideño no se muestra en el menú de navegación */}
-              <li><Link to="/menunavideno" onClick={toggleMenu}>Posadas</Link></li>
+              <li><Link to="/menu-navideno" onClick={toggleMenu}>Posadas</Link></li>
               <li><Link to="/contact" onClick={toggleMenu}>Contacto</Link></li>
               <li><Link to="/reservations" onClick={toggleMenu}>Reservar</Link></li>
             </ul>
@@ -76,7 +76,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/menu" element={<Menu />} />
             {/* Ruta funcional del menú navideño (accesible solo por QR o directamente) */}
-            <Route path="/menunavideno" element={<MenuNavideno />} />
+            <Route path="/menu-navideno" element={<MenuNavideno />} />
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
