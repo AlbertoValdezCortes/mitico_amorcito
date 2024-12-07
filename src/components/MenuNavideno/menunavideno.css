@@ -2,12 +2,94 @@
     position: relative;
     max-width: 64rem;
     margin: 0 auto;
-    padding: 8rem 2rem 2rem; /* Espaciado superior */
+    padding: 8rem 2rem 2rem;
     background-color: rgb(255, 251, 235);
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     z-index: 1;
+  }
+  
+  /* Esferas y adornos decorativos */
+  .esfera-img,
+  .muerdago-img,
+  .santa-img,
+  .arbol-img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+  
+  .esfera-container {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .muerdago-img {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .santa-img {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+  }
+  
+  .arbol-img {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+  }
+  
+  /* Títulos */
+  .menu-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #b91c1c;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .menu-subtitle {
+    font-size: 1.5rem;
+    color: rgb(120, 53, 15);
+    margin-bottom: 2rem;
+  }
+  
+  .menu-customize {
+    font-size: 1.125rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  /* Botones */
+  .menu-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .menu-button {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    background-color: #15803d;
+    border: none;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .menu-button:hover {
+    background-color: #14532d;
+    transform: scale(1.05);
   }
   
   /* Contenedor flotante de cada paquete */
@@ -36,16 +118,16 @@
     text-align: center;
   }
   
-  /* Lista de contenido sin bullets y alineada a la izquierda */
+  /* Lista de contenido sin bullets */
   .package-list {
-    list-style: none; /* Elimina los puntos */
+    list-style: none;
     padding: 0;
     margin: 0;
     font-size: 1.125rem;
     color: rgb(24, 24, 27);
-    text-align: left; /* Alinear el texto a la izquierda */
+    text-align: left;
     line-height: 1.6;
-    margin-left: 1rem; /* Ajuste para que el contenido no esté pegado al borde */
+    margin-left: 1rem;
   }
   
   /* Precio destacado */
@@ -57,117 +139,98 @@
     text-align: center;
   }
   
-  /* Imágenes decorativas con tamaño fijo */
-  .esfera-img,
-  .muerdago-img,
-  .santa-img,
-  .arbol-img {
-    width: 3rem;
-    height: 3rem;
-    object-fit: contain;
-    margin: 0 auto;
-  }
-  
-  /* Botones del menú */
-  .menu-buttons-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .menu-button {
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: white;
-    background-color: #15803d;
-    border: none;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .menu-button:hover {
-    background-color: #14532d;
-    transform: scale(1.05);
-  }
-  
-  /* Ajustes de responsividad */
+  /* Responsividad */
   @media (max-width: 768px) {
     .menu-container {
-      padding: 6rem 1rem 1rem; /* Reducir el padding superior y lateral */
+      padding: 6rem 1rem 1rem;
     }
   
     .package-card {
-      padding: 1rem; /* Compactar las tarjetas */
+      padding: 1rem;
     }
   
-    .package-title {
-      font-size: 1.5rem; /* Reducir el tamaño del título */
+    .menu-title {
+      font-size: 1.75rem;
     }
   
-    .package-price {
-      font-size: 1.5rem; /* Reducir el tamaño del precio */
-    }
-  
-    .package-list {
-      font-size: 1rem; /* Reducir el tamaño del texto de la lista */
-      line-height: 1.4;
-      margin-left: 1rem; /* Asegurar alineación para dispositivos móviles */
+    .menu-subtitle,
+    .menu-customize {
+      font-size: 1rem;
     }
   
     .menu-buttons-container {
-      flex-direction: column; /* Botones uno debajo del otro */
+      flex-direction: column;
       gap: 1rem;
     }
   
     .menu-button {
-      font-size: 1rem; /* Reducir el tamaño del texto del botón */
+      font-size: 1rem;
       padding: 0.75rem 1.5rem;
+    }
+  
+    .package-title {
+      font-size: 1.5rem;
+    }
+  
+    .package-price {
+      font-size: 1.5rem;
+    }
+  
+    .package-list {
+      font-size: 1rem;
+      line-height: 1.4;
     }
   
     .esfera-img,
     .muerdago-img,
     .santa-img,
     .arbol-img {
-      width: 2.5rem; /* Reducir aún más el tamaño de las imágenes decorativas */
+      width: 2.5rem;
       height: 2.5rem;
     }
   }
   
   @media (max-width: 480px) {
     .menu-container {
-      padding: 4rem 1rem 1rem; /* Más compacto para pantallas muy pequeñas */
+      padding: 4rem 1rem 1rem;
     }
   
     .package-card {
-      padding: 0.75rem; /* Compactar aún más las tarjetas */
+      padding: 0.75rem;
     }
   
-    .package-title {
-      font-size: 1.25rem; /* Ajustar tamaño del título */
+    .menu-title {
+      font-size: 1.5rem;
     }
   
-    .package-price {
-      font-size: 1.25rem; /* Ajustar el tamaño del precio */
-    }
-  
-    .package-list {
-      font-size: 0.875rem; /* Reducir tamaño del texto */
-      margin-left: 1rem; /* Asegurar alineación adecuada */
+    .menu-subtitle,
+    .menu-customize {
+      font-size: 0.875rem;
     }
   
     .menu-button {
-      font-size: 0.875rem; /* Reducir el tamaño del texto del botón */
+      font-size: 0.875rem;
       padding: 0.5rem 1rem;
+    }
+  
+    .package-title {
+      font-size: 1.25rem;
+    }
+  
+    .package-price {
+      font-size: 1.25rem;
+    }
+  
+    .package-list {
+      font-size: 0.875rem;
+      line-height: 1.2;
     }
   
     .esfera-img,
     .muerdago-img,
     .santa-img,
     .arbol-img {
-      width: 2rem; /* Tamaño más compacto para pantallas pequeñas */
+      width: 2rem;
       height: 2rem;
     }
   }

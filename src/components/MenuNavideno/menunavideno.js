@@ -29,6 +29,9 @@ const MenuNavideno = () => {
         <p className="menu-subtitle">
           Elige entre nuestras opciones de <strong>Desayunos</strong> o <strong>Comida/Cena</strong>.
         </p>
+        <p className="menu-customize">
+          ¿No encuentras lo que necesitas? Personaliza tu propio paquete según tus necesidades y presupuesto.
+        </p>
         
         {/* Botones para seleccionar el menú */}
         <div className="menu-buttons-container">

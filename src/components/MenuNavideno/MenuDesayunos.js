@@ -8,6 +8,9 @@ const MenuDesayunos = () => {
       <p className="menu-subtitle">
         ¡Empieza tu mañana con nuestro sabor navideño!
       </p>
+      <p className="menu-customize">
+        ¿No encuentras lo que necesitas? Personaliza tu propio paquete según tus necesidades y presupuesto.
+      </p>
       <div className="packages-container">
         {/* Paquete 1 */}
         <div className="package-card">

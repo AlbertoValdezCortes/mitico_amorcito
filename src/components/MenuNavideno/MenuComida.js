@@ -8,6 +8,9 @@ const MenuComida = () => {
       <p className="menu-subtitle">
         ¡Perfectos para tus celebraciones de tarde y noche!
       </p>
+      <p className="menu-customize">
+        ¿No encuentras lo que necesitas? Personaliza tu propio paquete según tus necesidades y presupuesto.
+      </p>
       <div className="packages-container">
         {/* Paquete 1 */}
         <div className="package-card">
