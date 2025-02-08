@@ -74,7 +74,17 @@ function Home() {
                 rel="noopener noreferrer"
                 style={{ color: '#7B4436', fontWeight: 'bold' }}
               >
-                (33) 1293-7187
+                Teléfono (33) 1641-0988
+              </a>
+              </p>
+              <p>
+              <a
+                href="https://wa.me/5213312937187"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: '#7B4436', fontWeight: 'bold' }}
+              >
+                WhatsApp (33) 1293-7187
               </a>
               </p>
             <p>
@@ -82,7 +92,7 @@ function Home() {
                 href="mailto:contacto@miticocafe.com"
                 style={{ color: '#7B4436', fontWeight: 'bold' }}
               >
-                contacto@miticocafe.com
+                contacto@miticoamorcito.com
               </a>
             </p>
           </div>

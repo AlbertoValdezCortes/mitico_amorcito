@@ -124,19 +124,19 @@ function About() {
 
         {/* Iconos de Redes Sociales */}
         <div className="social-icons">
-          <a href="https://bit.ly/FacebookMíticoAmorcito" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/mitico.amorcito" target="_blank" rel="noopener noreferrer">
             <FaFacebook />
           </a>
-          <a href="https://bit.ly/InstagramMiticoAmorcito" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/mitico_amorcito/?next=%2Falberto.valdez.9081%2F#" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
-          <a href="https://bit.ly/TikTokMiticoAmorcito" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.tiktok.com/@miticoamorcito" target="_blank" rel="noopener noreferrer">
             <FaTiktok />
           </a>
-          <a href="https://bit.ly/WhatsAppMiticoAmorcito" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/523312937187" target="_blank" rel="noopener noreferrer">
             <FaWhatsapp />
           </a>
-          <a href="https://bit.ly/UbicacionMiticoAmorcito" target="_blank" rel="noopener noreferrer">
+          <a href="https://maps.app.goo.gl/Jts5FRQAdde51YdD9" target="_blank" rel="noopener noreferrer">
             <FaMapMarkerAlt />
           </a>
         </div>
