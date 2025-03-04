@@ -1,0 +1,186 @@
+/* ======= CONTENEDOR DEL INVENTARIO ======= */
+.inventario-container {
+    text-align: center;
+    padding: 10px;
+    max-width: 100%;
+    overflow: hidden; /* Evita desbordamiento */
+  }
+  
+  /* ======= ENCABEZADO DEL INVENTARIO ======= */
+  .inventario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .inventario-logo {
+    width: 100px;
+    height: auto;
+  }
+
+/* ======= BOTÓN DE CERRAR SESIÓN - MEJORADO ======= */
+.logout-button {
+  background-color: #d9534f; /* Rojo elegante */
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Aumentamos el padding */
+  font-size: 16px; /* Tamaño de fuente uniforme */
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  display: inline-block; /* Se adapta al tamaño del contenido */
+  min-width: 130px; /* Mínimo ancho para evitar que sea más pequeño que el texto */
+  text-align: center;
+}
+
+.logout-button:hover {
+  background-color: #c9302c; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de ligero agrandamiento */
+}
+
+.logout-button:active {
+  transform: scale(0.95); /* Efecto al hacer clic */
+}
+
+/* ======= AJUSTE PARA PANTALLAS PEQUEÑAS ======= */
+@media (max-width: 768px) {
+  .logout-button {
+    width: 100%;
+    max-width: 200px; /* Mantiene un tamaño razonable */
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+  
+  /* ======= TABLA INVENTARIO - COMPACTADA ======= */
+  .table-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    max-width: 100%;
+  }
+  
+  /* Ajustar columnas para que ocupen menos espacio */
+  th, td {
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: normal; /* Permite que el texto se ajuste en varias líneas */
+    word-break: break-word; /* Evita que palabras largas desborden */
+  }
+  
+  /* Ajuste de inputs dentro de la tabla */
+  input {
+    width: 40px;
+    text-align: center;
+    font-size: 12px;
+    padding: 3px;
+    box-sizing: border-box;
+  }
+  
+  /* Botón en la tabla */
+  button {
+    padding: 5px;
+    font-size: 12px;
+    width: 70px;
+    box-sizing: border-box;
+  }
+  
+  /* ======= AJUSTES PARA PANTALLAS PEQUEÑAS ======= */
+  @media (max-width: 768px) {
+    .inventario-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .inventario-logo {
+      width: 80px;
+      height: auto;
+    }
+  
+    .logout-button {
+      width: 100%;
+      max-width: 200px;
+      display: block;
+      margin: 10px auto;
+    }
+  
+    /* Compactamos más la tabla */
+    table {
+      width: 100%;
+    }
+  
+    th, td {
+      padding: 3px;
+      font-size: 11px;
+    }
+  
+    input {
+      width: 35px;
+      font-size: 11px;
+    }
+  
+    button {
+      width: 65px;
+      font-size: 11px;
+    }
+  }
+
+  /* ======= PIE DE PÁGINA FIJO ======= */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* ======= EVITAR QUE "GUARDAR" SE DIVIDA ======= */
+button {
+  white-space: nowrap; /* Evita que el texto se parta en dos líneas */
+  min-width: 80px; /* Asegura que haya espacio suficiente */
+  padding: 5px;
+  font-size: 12px;
+}
+
+/* ======= BOTÓN ATRÁS ======= */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+/* ======= ALERTA DE STOCK MÍNIMO ======= */
+.alerta-stock {
+  background-color: rgba(255, 0, 0, 0.3) !important;
+  font-weight: bold;
+  color: red;
+}

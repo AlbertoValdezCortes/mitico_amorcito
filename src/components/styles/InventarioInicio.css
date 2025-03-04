@@ -1,0 +1,51 @@
+/* ======= ESTILOS PARA INVENTARIO INICIO ======= */
+.inventario-inicio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f3d9bc; /* Color de fondo suave */
+}
+
+.inventario-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* ======= ESTILOS PARA BOTONES ======= */
+.inventario-inicio-container button {
+    width: 250px;
+    padding: 12px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff; /* Azul profesional */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.inventario-inicio-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .inventario-inicio-container button {
+        width: 200px;
+        font-size: 14px;
+        padding: 10px;
+    }
+}

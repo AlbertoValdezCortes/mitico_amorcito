@@ -1,0 +1,108 @@
+/* ======= CONTENEDOR PRINCIPAL ======= */
+.recetario-container {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* ======= BOTÓN ATRÁS ======= */
+.back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+/* ======= CONTENEDOR DEL PDF ======= */
+.pdf-container {
+    width: 100vw; /* Asegurar que ocupa todo el ancho */
+    height: 100vh; /* Usar toda la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita barras de desplazamiento */
+    background-color: black; /* Evita bordes grises */
+}
+
+/* PDF Viewer sin barra de herramientas */
+.pdf-viewer {
+    width: 100vw; /* Ocupar todo el ancho */
+    height: 100vh; /* Ocupar toda la altura */
+    border: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    transform: scale(1.5); /* Aumenta el tamaño del contenido */
+    transform-origin: top left; /* Mantiene el contenido bien posicionado */
+}
+
+/* ======= MEDIA QUERIES PARA PANTALLAS PEQUEÑAS ======= */
+@media (max-width: 768px) {
+    .pdf-container {
+        width: 259vw;
+        height: 100vh;
+    }
+
+    .pdf-viewer {
+        width: 259vw;
+        height: 100vh;
+        transform: scale(4.5); /* Aumenta aún más el contenido en móviles */
+        transform-origin: top left;
+    }
+
+    .back-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* ======= CONTENEDOR DEL BUSCADOR ======= */
+.search-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.search-icon:hover {
+    color: #0056b3;
+}
+
+/* ======= INPUT DE BÚSQUEDA ======= */
+.search-input {
+    display: none;
+    position: absolute;
+    top: -5px;
+    right: 35px;
+    width: 180px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-container input {
+    display: block;
+}

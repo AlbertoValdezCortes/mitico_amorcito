@@ -1,49 +1,73 @@
+/* ======= RESET GENERAL ======= */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Evita desplazamiento horizontal */
 }
 
 .App {
   text-align: center;
 }
 
-/* Barra de navegación */
+/* ======= CARRUSEL ======= */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+/* ======= BARRA DE NAVEGACIÓN ======= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
-  transition: all 0.3s ease; /* Animación suave */
+  transition: all 0.3s ease;
 }
 
-/* Estilos de la barra de navegación reducida */
 .navbar-small {
-  padding: 10px 30px; /* Reducimos el padding */
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro para resaltar */
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Reducimos el tamaño del logo en la versión reducida */
-.navbar-small .logo-container img {
-  height: 100px; /* Ajusta el tamaño del logo en la barra reducida */
-}
-
-.logo-container img {
-  height: 300px; /* Tamaño normal del logo */
-  cursor: pointer;
-}
-
+/* LOGO */
 .logo-container {
   flex: 1;
 }
 
-/* Menú de navegación */
+.logo-container img {
+  height: 300px;
+  cursor: pointer;
+}
+
+.navbar-small .logo-container img {
+  height: 100px;
+}
+
+/* ======= MENÚ DE NAVEGACIÓN ======= */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -74,10 +98,10 @@ body {
 }
 
 .nav-menu li a:hover {
-  color: #ffeb3b; /* Color hover */
+  color: #ffeb3b;
 }
 
-/* Menú hamburguesa para pantallas pequeñas */
+/* ======= MENÚ HAMBURGUESA (MÓVILES) ======= */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -92,7 +116,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Contenedor de la información y el mapa */
+/* ======= CONTENEDOR DE INFORMACIÓN Y MAPA ======= */
 .info-container {
   display: flex;
   justify-content: space-between;
@@ -107,7 +131,7 @@ body {
   height: auto;
 }
 
-/* Información del restaurante */
+/* ======= INFORMACIÓN DEL RESTAURANTE ======= */
 .restaurant-info {
   flex: 1;
   margin-left: 20px;
@@ -129,7 +153,7 @@ body {
   font-weight: bold;
 }
 
-/* Mapa */
+/* ======= MAPA ======= */
 .restaurant-map {
   flex: 1;
   margin-right: 20px;
@@ -141,65 +165,7 @@ body {
   border: none;
 }
 
-/* Media Queries para pantallas pequeñas */
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    text-align: center;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .info-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .restaurant-map,
-  .restaurant-info {
-    margin: 0;
-    width: 100%;
-  }
-
-  .restaurant-map iframe {
-    width: 100%;
-    height: 350px;
-  }
-
-  .restaurant-info p {
-    font-size: 28px;
-    margin: 15px 10px;
-  }
-}
-
-/* Media Queries para pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .info-container {
-    padding: 10px;
-  }
-
-  .restaurant-info p {
-    font-size: 22px;
-  }
-
-  .restaurant-map iframe {
-    height: 300px;
-  }
-}
-
-/* Estilos para los iconos de redes sociales */
+/* ======= REDES SOCIALES ======= */
 .social-icons {
   display: flex;
   gap: 15px;
@@ -217,34 +183,7 @@ body {
   color: #ffeb3b;
 }
 
-/* Estilos del carrusel */
-.carousel {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.carousel-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.carousel-image.active {
-  opacity: 1;
-}
-
-.carousel-image:not(.active) {
-  opacity: 0;
-}
-
-/* Botón flotante del carrito */
+/* ======= BOTÓN CARRITO ======= */
 .floating-cart-button {
   position: fixed;
   bottom: 20px;
@@ -263,4 +202,22 @@ body {
 
 .floating-cart-button:hover {
   background-color: #005f5f;
+}
+
+/* ======= MEDIA QUERIES ======= */
+@media (max-width: 480px) {
+  .restaurant-info p {
+    font-size: 22px;
+  }
+
+  .restaurant-map iframe {
+    height: 300px;
+  }
+}
+
+/* ======= OCULTAR MENÚ EN INVENTARIO ======= */
+.hide-navbar .navbar,
+.hide-navbar .social-icons,
+.hide-navbar .footer {
+  display: none !important;
 }
