@@ -1,0 +1,247 @@
+.about-container {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #fff8f2, #ffffff);
+  color: #3a2e2e;
+}
+
+.about-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #7b4436;
+}
+
+.about-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.history-section {
+  padding: 2rem 1rem;
+  background-color: #fdf5f1;
+  color: #3a2e2e;
+}
+
+.history-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #7b4436;
+  text-align: center;
+}
+
+.history-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  text-align: justify;
+  letter-spacing: 0.02em;
+}
+
+/* PARALLAX & DEPTH VISUALS */
+.features-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  perspective: 1000px; /* Parallax Depth */
+}
+
+.features-info {
+  flex: 1;
+  width: 100%;
+  z-index: 2;
+}
+
+.feature {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  color: #7b4436;
+  margin-top: 0.5rem;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.features-image img {
+  max-width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.features-image img:hover {
+  transform: translateZ(20px) scale(1.02);
+  filter: brightness(1.05);
+}
+
+.tasting-section {
+  padding: 2rem 1rem;
+  background-color: #fff8f2;
+  color: #3a2e2e;
+  text-align: center;
+}
+
+.tasting-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #7b4436;
+}
+
+.tasting-section p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.menu-button {
+  background-color: #7b4436;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: #5c3228;
+  transform: scale(1.05);
+}
+
+.tasting-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tasting-item {
+  text-align: center;
+  perspective: 800px;
+}
+
+.tasting-item img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.tasting-item img:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.tasting-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.visit-section {
+  background-color: #fdf5f1;
+  padding: 2rem 1rem;
+  color: #3a2e2e;
+  text-align: center;
+  perspective: 1000px;
+}
+
+.visit-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #7b4436;
+}
+
+.visit-description {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.visit-images {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.visit-item {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.visit-item h3 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #7b4436;
+}
+
+.visit-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.visit-item img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.visit-item img:hover {
+  transform: translateZ(20px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+.social-icons a {
+  color: #7b4436;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #d48929;
+}
+
+@media (min-width: 768px) {
+  .features-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .features-info,
+  .features-image {
+    flex: 1;
+  }
+
+  .tasting-images {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .visit-images {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

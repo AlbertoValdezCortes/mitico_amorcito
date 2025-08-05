@@ -1,0 +1,111 @@
+/* Menu.css */
+
+.menu-wrapper {
+  transition: background 1s ease-in-out, color 0.5s ease-in-out;
+  padding: 2rem 0;
+}
+
+/* Fondo claro para Desayunos */
+.modo-dia {
+  background: linear-gradient(to bottom, #fffaf0, #fce3b0);
+  color: #333;
+}
+
+/* Fondo oscuro para Comida/Cena */
+.modo-noche {
+  background: linear-gradient(to bottom, #1c1c1c, #000000);
+  color: #f5f5f5;
+}
+
+.menu-section {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  transition: color 0.5s ease-in-out;
+}
+
+/* Botones */
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.menu-toggle-btn {
+  background-color: #7b4436;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  animation: pulse 1.5s infinite;
+}
+
+.menu-toggle-btn:hover {
+  background-color: #5c3228;
+  transform: scale(1.05);
+}
+
+.menu-toggle-btn.activo {
+  background-color: #d48929;
+  color: #fff;
+}
+
+.menu-toggle-btn.activo::before {
+  content: attr(data-icon);
+  position: absolute;
+  left: 1rem;
+  font-size: 1.2rem;
+}
+
+.menu-toggle-btn.activo {
+  padding-left: 2rem;
+}
+
+.menu-vista {
+  margin-top: 2rem;
+}
+
+/* Cards en modo oscuro */
+.vista-comida .platillo-card {
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+}
+
+/* Animación palpitar */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Título en modo noche */
+.titulo-noche {
+  color: #f1c40f; /* Amarillo dorado */
+}

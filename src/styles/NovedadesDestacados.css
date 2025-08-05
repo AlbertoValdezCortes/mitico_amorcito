@@ -1,0 +1,83 @@
+.novedades-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #fff8f0, #ffe0b3);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.novedades-title {
+  font-size: 2rem;
+  color: #7b4436;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.novedades-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.novedad-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideInFade 0.8s forwards;
+}
+
+/* Para animación por cascada (diferentes delays) */
+.novedad-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.novedad-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.novedad-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.novedad-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.novedad-card h3 {
+  font-size: 1.3rem;
+  color: #d48929;
+  margin-bottom: 0.8rem;
+}
+
+.novedad-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Animación entrada */
+@keyframes slideInFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .novedades-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .novedad-card {
+    width: 45%;
+  }
+}

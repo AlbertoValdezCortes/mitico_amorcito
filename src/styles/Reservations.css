@@ -1,0 +1,132 @@
+.reservations-section {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+}
+
+.reservations-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.reservations-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reservations-form input,
+.reservations-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: none;
+}
+
+.reservations-section {
+  font-family: sans-serif;
+  background-color: #fdfaf6;
+  color: #333;
+}
+
+.reservations-hero {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.reservations-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reservations-form label {
+  font-weight: bold;
+}
+
+.reservations-form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.button-reservar {
+  padding: 0.9rem;
+  background-color: #7B4436;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-reservar:hover {
+  background-color: #5c2e24;
+}
+
+.success-message {
+  background-color: #dff0d8;
+  color: #2e7d32;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.croquis-wrapper {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.croquis-wrapper img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile-first */
+@media (max-width: 600px) {
+  .overlay h2 {
+    font-size: 1.5rem;
+  }
+
+  .reservations-form {
+    padding: 1rem;
+  }
+}

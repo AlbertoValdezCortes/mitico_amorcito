@@ -1,0 +1,75 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transform: scale(1.05);
+}
+
+.carousel-image.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Estilo general de la info del home */
+.home-info {
+  background-color: #f7f7f7;
+  padding: 2rem 1rem;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.restaurant-map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+}
+
+.restaurant-info {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.restaurant-info p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.restaurant-info a {
+  color: #7c4dff;
+  text-decoration: none;
+}
+
+/* Mejor visualización para pantallas grandes */
+@media (min-width: 768px) {
+  .info-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .restaurant-map,
+  .restaurant-info {
+    flex: 1;
+  }
+}

@@ -1,38 +1,50 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fondo animado de Amanecer / Atardecer */
+.app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to bottom, #fceabb, #f8b500); /* Amanecer */
+  transition: background 1s ease-in-out, transform 1s ease-in-out, filter 1s ease-in-out;
+  filter: brightness(1.05);
+}
+
+/* Efecto noche */
+.app-background.modo-noche {
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* Atardecer/Noche */
+  transform: translateY(-10px);
+  filter: brightness(0.6);
+}
+
+/* Botón Flotante */
+.menu-float-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
   color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 1500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-float-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
 }
